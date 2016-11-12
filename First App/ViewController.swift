@@ -14,17 +14,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theTextField: UITextField!
     
-    var tapCount = 0
+    @IBOutlet weak var input1: UITextField!
     
-    @IBAction func changeTextField(_ sender: AnyObject) {
-        theTextField.text = "Nothing is open!"
+    @IBOutlet weak var input2: UITextField!
+    
+    @IBAction func addNumbers(_ sender: AnyObject) {
         
-        tapCount += 1
-        
-        if(tapCount > 5) {
-            theLabel.text = "Stop pressing it"
-        } else {
-            theLabel.text = "Press more"
+        if((input1 != nil) && (input2 != nil)) {
+            theLabel.text = "Answer is: \(Double(input1.text!)! + Double(input2.text!)!)"
         }
     }
     @IBAction func buttonTapped(_ sender: AnyObject) {

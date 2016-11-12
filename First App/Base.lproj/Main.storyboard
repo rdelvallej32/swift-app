@@ -32,29 +32,40 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6bb-Mo-af1"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-SF-GB5">
-                                <frame key="frameInset" minX="139" minY="318" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-P6-ccq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Jja-sY-dni"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpr-JL-GQp">
-                                <frame key="frameInset" minX="27" minY="316" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="What's Open?"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVd-8a-1CM">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmg-rA-Kq6">
+                                <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="changeTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkE-41-S9k"/>
+                                    <action selector="addNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lso-WH-khW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AVd-8a-1CM" firstAttribute="top" secondItem="3wE-P6-ccq" secondAttribute="bottom" constant="8" id="0E0-Ky-JMD"/>
+                            <constraint firstItem="3wE-P6-ccq" firstAttribute="trailing" secondItem="AVd-8a-1CM" secondAttribute="trailing" id="4OM-ss-AZm"/>
                             <constraint firstItem="hqm-Gn-5qu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="8y7-zz-Ldx"/>
                             <constraint firstItem="aEr-Nm-6im" firstAttribute="centerX" secondItem="hqm-Gn-5qu" secondAttribute="centerX" id="FWi-vt-c8I"/>
+                            <constraint firstItem="Hmg-rA-Kq6" firstAttribute="centerX" secondItem="AVd-8a-1CM" secondAttribute="centerX" id="SPO-8v-IiX"/>
                             <constraint firstItem="aEr-Nm-6im" firstAttribute="top" secondItem="hqm-Gn-5qu" secondAttribute="bottom" constant="9" id="TGn-4E-0oK"/>
+                            <constraint firstItem="3wE-P6-ccq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFf-ZI-fOe"/>
                             <constraint firstItem="hqm-Gn-5qu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5b-sv-vgb"/>
                             <constraint firstItem="aEr-Nm-6im" firstAttribute="centerX" secondItem="hqm-Gn-5qu" secondAttribute="centerX" id="dDi-vC-BEK"/>
+                            <constraint firstItem="Hmg-rA-Kq6" firstAttribute="top" secondItem="AVd-8a-1CM" secondAttribute="bottom" constant="22" id="ie4-dj-axJ"/>
+                            <constraint firstItem="3wE-P6-ccq" firstAttribute="leading" secondItem="AVd-8a-1CM" secondAttribute="leading" id="oLJ-fC-oLQ"/>
+                            <constraint firstItem="3wE-P6-ccq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-153.5" id="vge-4N-UmD"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -63,8 +74,9 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="input1" destination="3wE-P6-ccq" id="vSf-vf-viD"/>
+                        <outlet property="input2" destination="AVd-8a-1CM" id="10K-Z7-PFi"/>
                         <outlet property="theLabel" destination="hqm-Gn-5qu" id="QJa-hZ-U54"/>
-                        <outlet property="theTextField" destination="BNe-SF-GB5" id="QmS-LL-RFd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
